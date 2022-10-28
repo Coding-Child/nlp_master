@@ -58,11 +58,13 @@ Input Sequence  : 지미 카터는 [MASK] 섬터 카운티 [MASK] 마을에서 �
 Target Sequence :            조지아주           플레인스
 ```
 
-#### Rules:
+#### Rules: 
 
-1. Randomly change 80% of tokens to **[MASK]** tokens
-2. Randomly change 80% of tokens to **another word** 
-3. A random 10% token holds the same word. But model have to make a prediction.
+Change the 15% token in each sentence to the [MASK] token.
+
+  1. Randomly change 80% of tokens to **[MASK]** tokens
+  2. Randomly change 80% of tokens to **another word** 
+  3. A random 10% token holds the same word. But model have to make a prediction.
 
 ### · Predict Next Sentence
 > Original Paper: 3.3.2 Task #2: Next Sentence Prediction
