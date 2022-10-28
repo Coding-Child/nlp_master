@@ -13,7 +13,8 @@ Attention is All You Need 논문 참고 \
 https://arxiv.org/abs/1706.03762
 
 # BERT
-TinyBERT 파라미터를 사용하여 진행\\
+TinyBERT 파라미터를 사용하여 진행\
+\
 Layer: 4\
 Transformer_hidden: 312\
 FFN_intermediate: 1200\
