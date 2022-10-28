@@ -1,7 +1,7 @@
 # INTRODUCTION
 This page is to implement BERT & Transformer from scratch.
 
-* requirement\
+* Requirement\
 pytorch ver 1.12.1+cu116\
 sentencepiece ver 0.1.97\
 tqdm ver 4.64.1\
