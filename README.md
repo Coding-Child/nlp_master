@@ -1,6 +1,12 @@
 # INTRODUCTION
 This is pages to implement BERT & Transformer from scratch.
 
+* requirement
+| module | version | pip |
+| :--- | :--- | :----------------- |
+| pytorch | 1.12.1 + cu116 | pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116|
+
+
 # Transformer
 Refer to the Transformer paper
 https://arxiv.org/abs/1706.03762
