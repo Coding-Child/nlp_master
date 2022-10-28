@@ -45,7 +45,7 @@ Using SentencePiece
 ## 2.Train your own BERT model
 Train code is existing in main_pretrain
 
-### Language Model Pre-training
+### · Language Model Pre-training
 > Original Paper : 3.3.1 Task #1: Masked LM
 ```
 Input Sequence  : 지미 카터는 [MASK] 섬터 카운티 [MASK] 마을에서 태어났다.
@@ -58,7 +58,7 @@ Target Sequence :            조지아주           플레인스
 2. Randomly change 80% of tokens to **another word** 
 3. A random 10% token holds the same word. But model have to make a prediction.
 
-### Predict Next Sentence
+### · Predict Next Sentence
 > Original Paper: 3.3.2 Task #2: Next Sentence Prediction
 ```
 Input : [CLS] 조지아 공과대학교를 졸업하였다 [SEP] 그 후 해군에 들어가 전함·원자력·잠수함의 승무원으로 일하였다  [SEP]
@@ -73,6 +73,6 @@ Label : NotNext
 1. At random, 50% of the following sentences will be ***consecutive sentences***.
 2. At random, 50% of the next sentence will be ***irrelevant***.
 
-##### Author
+# Author
 SooHyung Park, NLP Lab, Catholic University of Korea
 (pshpulip40@gmail.com / pshpulip22@catholic.ac.kr)
