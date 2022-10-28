@@ -1,50 +1,78 @@
-# nlp_master
-BERT 모델과 Transformer 모델 연습 페이지
+# INTRODUCTION
+This is pages to implement BERT & Transformer from scratch.
 
 # Transformer 코드
-Attention is All You Need 논문 참고 \
+Refer to the Transformer paper
 https://arxiv.org/abs/1706.03762
 
 # BERT
-Transformer를 직접 구현하여 Transformer의 Encoder를 가져와 진행\
-\
-TinyBERT 파라미터를 사용하여 진행\
-\
-Layer: 4\
-Transformer_hidden: 312\
-FFN_intermediate: 1200\
-attention_head: 12\
-Total_Parameter: 14.5M\
-\
-BERT 논문 참고\
+Implement Transformer from scratch and only Encoder is imported to proceed
+
+Using TinyBERT's parameters
+
+```
+Layer: 4
+Transformer_hidden: 312
+FFN_intermediate: 1200
+attention_head: 12
+Total_Parameter: 14.5M
+```
+
+Refer to the BERT paper
 https://arxiv.org/abs/1810.04805
-\
-TinyBERT 논문 참고\
+
+Refer to the TinyBERT paper
 https://arxiv.org/abs/1909.10351
 
-# Dataset
-kowiki를 크롤링하여 csv파일 제작 후 텍스트로 변환시켜 제작함
-\
-* NSP task
-현재 단락에서 random으로 문장길이를 골라와 tokens_a를 만들어 냄\
-50%의 확률로 다른 단락에서 문장을 가져와 tokens_b를 만들어 진행해 NSP task 수행\
-[CLS] + tokens_a + [SEP] + tokens_b ------> is_Next/not_Next\
-\
-ex) [CLS]조지아 공과대학교를 졸업하였다. [SEP]그 후 해군에 들어가 전함·원자력·잠수함의 승무원으로 일하였다. -> [CLS]조지아 공과대학교를 졸업하였다. [SEP]수학은 수, 양, 구조, 공간, 변화, 논리 등의 개념을 다루는 학문이다. output: not_Next
-\
-\
-ex) [CLS]일반적으로 문학의 정의는 텍스트들의 집합이다. [SEP]각각의 국가들은 고유한 문학을 가질 수 있으며, 이는 기업이나 철학 조류, 어떤 특정한 역사적 시대도 마찬가지이다. ->[CLS]일반적으로 문학의 정의는 텍스트들의 집합이다. [SEP]각각의 국가들은 고유한 문학을 가질 수 있으며, 이는 기업이나 철학 조류, 어떤 특정한 역사적 시대도 마찬가지이다. output: is_Next
+# Quickstart
 
-* MLM task
-index에 대해 80%의 확률 [MASK]를 취한다\
-이중 10%의 확률로 기존의 값을 유지한다\
-또한 10%의 확률로 만들어놓은 vocab에서 임의의 값을 가져와 다른 단어로 대체한다.\
-\
-ex) [CLS]일반적으로 문학의 정의는 텍스트들의 집합이다. [SEP]각각의 국가들은 고유한 문학을 가질 수 있으며, 이는 기업이나 철학 조류, 어떤 특정한 역사적 시대도 마찬가지이다.
-\
-    -----> is_Next 
-\
-    [CLS]일반적으로 문학의 정의는 [MASK]들의 집합이다. [SEP]각각의 국가들은 [MASK] 문학을 가질 수 있으며, 이는 기업이나 [MASK] 조류, 어떤 특정한 [MASK] 시대도 마찬가지이다.
-* 학습 진행 방법
-\
-NSP task 수행 후 is_Next가 결과로 나오게되면 MLM task를 수행
+## 0. Prepare your corpus
+```
+제임스 얼 카터 주니어(, 1924년 10월 1일 ~ )는 민주당 출신 미국 39대 대통령 (1977년 ~ 1981년)이다.
+지미 카터는 조지아주 섬터 카운티 플레인스 마을에서 태어났다.
+```
+
+or tokenized corpus (tokennization code is existing in package)
+```
+['▁제임스', '▁얼', '▁카', '터', '▁주', '니어', '(,', '▁192', '4', '년', '▁10', '월', '▁1', '일', '▁~', '▁)', '는', '▁민주', '당', '▁출신', '▁미국', '▁3', '9', '대', '▁대통령', '▁(19', '7', '7', '년', '▁~', '▁1981', '년', ')', '이다', '.']
+
+['▁지', '미', '▁카', '터', '는', '▁조지', '아', '주', '▁섬', '터', '▁카', '운', '티', '▁플', '레', '인', '스', '▁마을', '에서', '▁태어났다', '.']
+```
+
+## 1. Building vocab based on your corpus
+Using SentencePiece
+
+## 2.Train your own BERT model
+Train code is existing in main_pretrain
+
+# Language Model Pre-training
+> Original Paper : 3.3.1 Task #1: Masked LM
+```
+Input Sequence  : 지미 카터는 [MASK] 섬터 카운티 [MASK] 마을에서 태어났다.
+Target Sequence :            조지아주           플레인스
+```
+
+#### Rules:
+
+1. Randomly change 80% of tokens to **[MASK]** tokens
+2. Randomly change 80% of tokens to **another word** 
+3. A random 10% token holds the same word. But model have to make a prediction.
+
+# Predict Next Sentence
+> Original Paper: 3.3.2 Task #2: Next Sentence Prediction
+```
+Input : [CLS] 조지아 공과대학교를 졸업하였다 [SEP] 그 후 해군에 들어가 전함·원자력·잠수함의 승무원으로 일하였다  [SEP]
+Label : Is Next
+
+Input : [CLS] 조지아 공과대학교를 졸업하였다 [SEP] 의학 등 거의 모든 학문에서도 핵심적인 역할을 하며 다양한 방식으로 응용된다 [SEP]
+Label : NotNext
+```
+
+#### Rules:
+
+1. At random, 50% of the following sentences will be ***consecutive sentences***.
+2. At random, 50% of the next sentence will be ***irrelevant***.
+
+# Author
+SooHyung Park, NLP Lab, Catholic University of Korea
+(pshpulip40@gmail.com / pshpulip22@catholic.ac.kr)
