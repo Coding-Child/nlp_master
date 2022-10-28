@@ -76,8 +76,8 @@ Label : NotNext
 
 #### Rules:
 
-1. At random, 50% of the following sentences will be ***consecutive sentences***.
-2. At random, 50% of the next sentence will be ***irrelevant***.
+1. At random, 50% of the following sentences will be **consecutive sentences**.
+2. At random, 50% of the next sentence will be **irrelevant**.
 
 # Author
 SooHyung Park, NLP Lab, Catholic University of Korea
