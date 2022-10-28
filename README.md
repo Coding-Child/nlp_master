@@ -2,13 +2,6 @@
 BERT 모델과 Transformer 모델 연습 페이지
 
 # Transformer 코드
-https://paul-hyun.github.io/transformer-01/
-\
-https://paul-hyun.github.io/transformer-02/
-\
-https://paul-hyun.github.io/transformer-03/
-\
-\
 Attention is All You Need 논문 참고 \
 https://arxiv.org/abs/1706.03762
 
@@ -28,4 +21,6 @@ TinyBERT 논문 참고\
 https://arxiv.org/abs/1909.10351
 
 # Dataset 
-kowiki를 크롤링하여 csv파일 제작 후 텍스트로 변환시켜 제작함
+kowiki를 크롤링하여 csv파일 제작 후 텍스트로 변환시켜 제작함\
+"," 기준으로 split을 진행해 is_Next 판별\
+NSP task와 MLM task 진행
