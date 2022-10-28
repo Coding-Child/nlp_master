@@ -1,5 +1,5 @@
 # INTRODUCTION
-This is pages to implement BERT & Transformer from scratch.
+This page is to implement BERT & Transformer from scratch.
 
 * requirement\
 pytorch ver 1.12.1+cu116\
