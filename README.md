@@ -1,11 +1,13 @@
 # INTRODUCTION
 This is pages to implement BERT & Transformer from scratch.
 
-# Transformer 코드
+# Transformer
 Refer to the Transformer paper
 https://arxiv.org/abs/1706.03762
 
 # BERT
+
+## Abstract
 Implement Transformer from scratch and only Encoder is imported to proceed
 
 Using TinyBERT's parameters
@@ -23,8 +25,6 @@ https://arxiv.org/abs/1810.04805
 
 Refer to the TinyBERT paper
 https://arxiv.org/abs/1909.10351
-
-# Quickstart
 
 ## 0. Prepare your corpus
 ```
