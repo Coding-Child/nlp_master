@@ -60,7 +60,7 @@ Target Sequence :            조지아주           플레인스
 
 #### Rules: 
 
-Change the 15% token in each sentence to the [MASK] token.
+Change the 15% token in each sentence to the **[MASK]** token.
 
   1. Randomly change 80% of tokens to **[MASK]** tokens
   2. Randomly change 80% of tokens to **another word** 
