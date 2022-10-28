@@ -22,5 +22,5 @@ https://arxiv.org/abs/1909.10351
 
 # Dataset 
 kowiki를 크롤링하여 csv파일 제작 후 텍스트로 변환시켜 제작함\
-"," 기준으로 split을 진행해 is_Next 판별\
+"," 기준으로 split을 진행해 NSP task 수행\
 NSP task와 MLM task 진행
