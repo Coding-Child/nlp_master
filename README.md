@@ -23,7 +23,8 @@ TinyBERT 논문 참고\
 https://arxiv.org/abs/1909.10351
 
 # Dataset
-kowiki를 크롤링하여 csv파일 제작 후 텍스트로 변환시켜 제작함\
+kowiki를 크롤링하여 csv파일 제작 후 텍스트로 변환시켜 제작함
+\
 * NSP task
 현재 단락에서 random으로 문장길이를 골라와 tokens_a를 만들어 냄\
 50%의 확률로 다른 단락에서 문장을 가져와 tokens_b를 만들어 진행해 NSP task 수행\
