@@ -6,6 +6,9 @@ Attention is All You Need 논문 참고 \
 https://arxiv.org/abs/1706.03762
 
 # BERT
+Transformer를 직접 구현하여 Transformer의 Encoder를 가져와 진행\
+Transformer 먼저 구현해야 코드사용 가능\
+\
 TinyBERT 파라미터를 사용하여 진행\
 \
 Layer: 4\
