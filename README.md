@@ -3,10 +3,10 @@ This page is to implement BERT & Transformer from scratch.
 
 * Requirement
 
-    pytorch ver 1.12.1+cu116\
-    sentencepiece ver 0.1.97\
-    tqdm ver 4.64.1\
-    ipython ver 8.5.0
+    pytorch ver. 1.12.1+cu116\
+    sentencepiece ver. 0.1.97\
+    tqdm ver. 4.64.1\
+    ipython ver. 8.5.0
 
 # Transformer
 Refer to the Transformer paper
