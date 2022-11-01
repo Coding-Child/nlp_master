@@ -78,10 +78,10 @@ Change the 15% token in each sentence to the **[MASK]** token.
 > Original Paper: 3.3.2 Task #2: Next Sentence Prediction
 ```
 Input : [CLS] 조지아 공과대학교를 졸업하였다 [SEP] 그 후 해군에 들어가 전함·원자력·잠수함의 승무원으로 일하였다  [SEP]
-Label : Is Next
+Label : Is Next (1)
 
 Input : [CLS] 조지아 공과대학교를 졸업하였다 [SEP] 의학 등 거의 모든 학문에서도 핵심적인 역할을 하며 다양한 방식으로 응용된다 [SEP]
-Label : NotNext
+Label : NotNext (0)
 ```
 
 #### Rules:
