@@ -24,7 +24,12 @@ Layer: 4
 Transformer_hidden: 312
 FFN_intermediate: 1200
 attention_head: 12
-Total_Parameter: 14.5M
+vocab_size: 30000
+Total_Parameter: 16.5M
+
+max_sequence_length: 256
+btch_size: 28
+Training Time: 4days
 ```
 
 Refer to the BERT paper
