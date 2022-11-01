@@ -21,4 +21,4 @@ df = pd.read_csv(in_file, sep=SEPARATOR, engine="python")
 with open(out_file, "w", encoding='utf-8') as f:
   for index, row in df.iterrows():
     f.write(row["text"]) # title 과 text를 중복 되므로 text만 저장 함
-    f.write("\n\n\n\n") # 구분자
+    f.write("\n\n\n\n") # 구분자 
