@@ -17,26 +17,20 @@ https://arxiv.org/abs/1706.03762
 ## Abstract
 Implement Transformer from scratch and only Encoder is imported to proceed
 
-Using TinyBERT's parameters
-
 ```
 Layer: 4
-Transformer_hidden: 312
-FFN_intermediate: 1200
-attention_head: 12
-vocab_size: 30000
-Total_Parameter: 16.5M
+Transformer_hidden: 256
+FFN_intermediate: 1024
+attention_head: 6
+vocab_size: 15000
+Total_Parameter: 7.6M
 
-max_sequence_length: 256
+max_sequence_length: 128
 btch_size: 28
-Training Time: 4days
 ```
 
 Refer to the BERT paper
 https://arxiv.org/abs/1810.04805
-
-Refer to the TinyBERT paper
-https://arxiv.org/abs/1909.10351
 
 ## 0. Prepare your corpus
 ```
