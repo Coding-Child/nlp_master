@@ -21,9 +21,9 @@ Implement Transformer from scratch and only Encoder is imported to proceed
 Layer: 4
 Transformer_hidden: 256
 FFN_intermediate: 1024
-attention_head: 6
-vocab_size: 15000
-Total_Parameter: 7.6M
+attention_head: 4
+vocab_size: 8000
+Total_Parameter: 5.3M
 
 max_sequence_length: 128
 btch_size: 28
