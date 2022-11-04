@@ -46,7 +46,7 @@ or tokenized corpus (tokennization code is existing in package)
 ```
 
 ## 1. Building vocab based on your corpus
-Using SentencePiece
+Using SentencePiece\
 Code path in "dataset/vocab.py"
 
 ## 2.Train your own BERT model
