@@ -6,6 +6,10 @@ from task2model import MovieClassification
 from trainer.task_trainer import train
 import matplotlib.pyplot as plt
 
+################################################################################
+#                  TODO: Load pretraining BERT & fine-tunning                  #
+################################################################################
+
 vocab_file = "data/kowiki.model"
 vocab = spm.SentencePieceProcessor()
 vocab.load(vocab_file)
