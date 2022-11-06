@@ -18,7 +18,7 @@ out_file_train = "data/kowiki_bert_{}_train.json"
 in_file_val = "data/kowiki_val.txt"
 out_file_val = "data/kowiki_bert_{}_val.json"
 count = 10
-n_seq = 512
+n_seq = 128
 mask_prob = 0.15
 
 data_dir = 'data'
@@ -26,7 +26,7 @@ save_dir = 'best_model'
 
 config = Config({
     "n_enc_vocab": len(vocab),
-    "n_enc_seq": 512,
+    "n_enc_seq": 128,
     "n_seg_type": 2,
     "n_layer": 4,
     "d_hidn": 312,
@@ -47,7 +47,7 @@ print("Total Parameters: %d | device: '%s' | vocab_size: %d" %(int(sum([p.neleme
 make_pretrain_data(vocab, in_file_train, out_file_train, count, n_seq, mask_prob)
 make_pretrain_data(vocab, in_file_val, out_file_val, count, n_seq, mask_prob)
 
-batch_size = 28
+batch_size = 128
 train_dataset = PretrainDataSet(vocab, f"{data_dir}/kowiki_bert_0_train.json")
 train_loader = DataLoader(train_dataset, batch_size = batch_size, shuffle = True,
                               collate_fn = pretrain_collate_fn)
@@ -57,7 +57,7 @@ dev_loader = DataLoader(dev_dataset, batch_size = batch_size, shuffle = False,
                             collate_fn = pretrain_collate_fn)
 
 learning_rate = 1e-4
-n_epoch = 40
+n_epoch = 60
 
 save_pretrain = f"{save_dir}/save_bert_pretrain.pth"
 best_epoch, best_loss = 0, 0
@@ -73,7 +73,7 @@ criterion_cls = nn.CrossEntropyLoss()
 criterion_lm = nn.CrossEntropyLoss(ignore_index = -1, reduction = 'mean')
 
 optimizer = Adam(model.parameters(), lr=learning_rate, weight_decay = 0.01, betas = (0.9, 0.999), eps = 1e-08)
-scheduler = MultiStepLR(optimizer, milestones=[25, 50, 75], gamma=0.5)
+scheduler = MultiStepLR(optimizer, milestones=[15, 30, 45], gamma=0.5)
 
 losses = []
 offset = best_epoch
