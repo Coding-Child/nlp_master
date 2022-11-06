@@ -85,5 +85,5 @@ Label : NotNext (0)
 2. At random, 50% of the next sentence will be **irrelevant**.
 
 # Author
-SooHyung Park, NLP Lab, Catholic University of Korea
+SooHyung Park, NLP Lab, Catholic University of Korea, Ungraduated
 (pshpulip40@gmail.com / pshpulip22@catholic.ac.kr)
