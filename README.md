@@ -87,6 +87,7 @@ Label : NotNext (0)
 2. At random, 50% of the next sentence will be **irrelevant**.
 
 ## Result
+Loss plot
 <img width="400" alt="plot" src="https://user-images.githubusercontent.com/115800583/200209805-bf032c9c-e35a-480e-844e-e7c07aa9cd4d.png">
 
 If you want highly pretrain acc, you can tunning hyper-parameter
