@@ -85,3 +85,5 @@ Label : NotNext (0)
 
 1. At random, 50% of the following sentences will be **consecutive sentences**.
 2. At random, 50% of the next sentence will be **irrelevant**.
+
+## Result
