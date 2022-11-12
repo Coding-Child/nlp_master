@@ -69,8 +69,6 @@ Change the 15% token in each sentence to the **[MASK]** token.
   2. Randomly change 10% of tokens to **another word** 
   3. A random 10% token holds the same word. But model have to make a prediction.
 
-※ But my own BERT is not changing another words.
-
 ### · Predict Next Sentence
 > Original Paper: 3.3.2 Task #2: Next Sentence Prediction
 ```
