@@ -3,7 +3,7 @@ This page is to implement BERT & Transformer from scratch.
 
 * Requirement
 
-    pytorch ver. 1.12.1+cu116\
+    pytorch ver. 1.13.0+cu117\
     sentencepiece ver. 0.1.97\
     tqdm ver. 4.64.1
 
@@ -17,16 +17,16 @@ https://arxiv.org/abs/1706.03762
 Implement Transformer from scratch and only Encoder is imported to proceed
 
 ```
-max_sequence_length: 128
-Layer: 4
-Transformer_hidden: 312
-FFN_intermediate: 1200
-attention_head: 4
-vocab_size: 8000
-Total_Parameter: 9.4M
+max_sequence_length: 512
+Layer: 12
+Transformer_hidden: 768
+FFN_intermediate: 3072
+attention_head: 12
+vocab_size: 32000
+Total_Parameter: 113M
 
-epoch: 60
-btch_size: 128
+epoch: 40
+btch_size: 4
 learning_rate: 1e-4
 weight_decay: 0.01
 ```
